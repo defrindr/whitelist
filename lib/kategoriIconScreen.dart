@@ -43,6 +43,7 @@ class _KategoriIconsScreenState extends State<KategoriIconsScreen>
         initIcon(context, _tabController.index);
       });
     });
+    initIcon(context, 0);
     Future.delayed(Duration.zero).then((_) {
       initIcon(context, _tabController.index);
     });
@@ -182,7 +183,7 @@ class _KategoriIconsScreenState extends State<KategoriIconsScreen>
                             color: _selectedIconIndex > -1 &&
                                     _selectedIconIndex == index - 1
                                 ? Theme.of(context).primaryColor
-                                : Color.fromARGB(255, 222, 63, 63)),
+                                : Color.fromARGB(255, 251, 248, 248)),
                         backgroundColor: _selectedIconIndex > -1 &&
                                 _selectedIconIndex == index - 1
                             ? Theme.of(context).accentColor
@@ -220,8 +221,8 @@ class _KategoriIconsScreenState extends State<KategoriIconsScreen>
     }
 
     // printing index of tab controller
-    data = getIconDataByType(_tabController.index);
-    streamSubscription.cancel();
+    data = getIconDataByType(index ?? 0);
+    // streamSubscription.cancel();
     var sumStream = streamSum(context, data);
     int setStateOn = 0;
     streamSubscription = sumStream.listen((value) {
@@ -231,9 +232,8 @@ class _KategoriIconsScreenState extends State<KategoriIconsScreen>
       }
 
       //Add list icon using stream, idk how to implement stream in the right way :'D
-      _listIcon.add(IconAttrb(
-          _tabController.index, data.keys.toList()[_listIcon.length]));
-      print(_listIcon.length.toString() + " - " + data.length.toString());
+      _listIcon
+          .add(IconAttrb(index ?? 0, data.keys.toList()[_listIcon.length]));
 
       //Setstate if setstateon == 6, you can change it or just throw it away
       if (setStateOn == 6) {
