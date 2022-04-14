@@ -333,6 +333,7 @@ class _MainScreenState extends State<MainScreen> {
       return AddWhiteListScreen();
     }));
     _listWhitelist.add(newItem);
+    getWhitelist();
   }
 
   Future<dynamic> updateItem(BuildContext context, WhitelistAttrb item) async {

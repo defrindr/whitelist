@@ -97,10 +97,14 @@ class _KategoriScreenState extends State<KategoriScreen> {
 
   @override
   void initState() {
+    print("Init State");
     super.initState();
-    getKategoriList();
     Kategori.initDatabase().then((db) {
       dbKategori = db;
+    });
+    // delay 1 second
+    Future.delayed(Duration(microseconds: 100), () {
+      getKategoriList();
     });
   }
 
