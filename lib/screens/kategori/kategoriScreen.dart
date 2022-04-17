@@ -4,10 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mywhitelist/component/KategoriItem.dart';
 import 'package:mywhitelist/database/kategoriDB.dart';
-import 'package:mywhitelist/kategoriIconScreen.dart';
+import 'package:mywhitelist/screens/kategori/kategoriIconScreen.dart';
 import 'package:mywhitelist/values/bahasa.dart';
-
-import 'function.dart';
+import 'package:mywhitelist/function.dart';
 
 class KategoriScreen extends StatefulWidget {
   @override
@@ -97,7 +96,6 @@ class _KategoriScreenState extends State<KategoriScreen> {
 
   @override
   void initState() {
-    print("Init State");
     super.initState();
     Kategori.initDatabase().then((db) {
       dbKategori = db;

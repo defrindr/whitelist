@@ -6,15 +6,14 @@ import 'package:intl/intl.dart';
 import 'package:mywhitelist/database/kategoriDB.dart';
 import 'package:mywhitelist/database/whitelistDB.dart';
 import 'package:mywhitelist/function.dart';
-import 'package:mywhitelist/kategoriIconScreen.dart';
+import 'package:mywhitelist/screens/kategori/KategoriIconScreen.dart';
 import 'package:mywhitelist/values/bahasa.dart';
-
 import 'package:mywhitelist/component/Widget.dart';
 
 class UpdateWhiteListScreen extends StatefulWidget {
   final WhitelistAttrb item;
 
-  UpdateWhiteListScreen(this.item);
+  const UpdateWhiteListScreen({Key? key, required this.item}) : super(key: key);
 
   @override
   _UpdateWhiteListScreenState createState() => _UpdateWhiteListScreenState();

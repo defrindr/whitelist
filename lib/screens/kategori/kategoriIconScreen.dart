@@ -4,11 +4,9 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:mywhitelist/add_kategori.dart';
+import 'package:mywhitelist/screens/kategori/add_kategori.dart';
 import 'package:mywhitelist/values/bahasa.dart';
 import 'package:mywhitelist/values/listIcon.dart';
-
-import 'values/listIcon.dart';
 
 class KategoriIconsScreen extends StatefulWidget {
   @override

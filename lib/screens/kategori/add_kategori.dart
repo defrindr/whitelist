@@ -6,7 +6,7 @@ import 'package:mywhitelist/database/kategoriDB.dart';
 import 'package:mywhitelist/values/bahasa.dart';
 import 'package:mywhitelist/values/listIcon.dart';
 
-import 'function.dart';
+import 'package:mywhitelist/function.dart';
 
 class AddKategoriScreen extends StatefulWidget {
   final IconAttrb iconAttrb;

@@ -23,7 +23,7 @@ class _KategoriItemState extends State<KategoriItem> {
           child: Center(
               child: Icon(
             widget.kategoriAttrb.icon,
-            color: Color.fromARGB(255, 247, 247, 247),
+            color: const Color.fromARGB(255, 247, 247, 247),
           ))),
       onTap: () {},
     );
